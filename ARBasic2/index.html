@@ -1,9 +1,83 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+  
+  <!-- include A-Frame obviously -->
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <!-- include ar.js for A-Frame -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  <script src="https://unpkg.com/aframe-particle-system-component@1.x.x/dist/aframe-particle-system-component.min.js"></script> 
+  <body>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<img src="./trackers/drill.png" style="width: 500px;">
-</body>
+    <a-scene embedded arjs >
+        <!-- this is meg's branch -->
+      <!-- Create a new asset with id "tree" to hold our tree.gltf -->
+      <a-assets>
+        <a-asset-item id="ground" src="models/noiseyGround.glb" ></a-asset-item>
+        <a-asset-item id="plant" src="models/plant tornado.glb" ></a-asset-item>
+        <a-asset-item id="eye" src="models/botEye.glb" ></a-asset-item>
+      </a-assets>
+    
+      <!-- define a camera which will move according to the marker position -->
+      <!-- <a-marker-camera type='pattern' url='./trackers/track.patt'> -->
+      <a-marker type='pattern' url='./trackers/TimeMrkr.patt'>
+            <!-- position that tree  and scale it, linked with the tree id-->
+            <a-entity rotation="-90 0 0" >
+
+              <a-entity   position="0 0 0" 
+              scale="0.8  0.7 0.8"
+              gltf-model="#ground"
+              animation-mixer >
+              </a-entity>
+
+              <a-entity   position="0 0.05 0" 
+              scale="0.3  0.3 0.3"
+              gltf-model="#plant"
+              animation-mixer
+              animation="property: rotation; dur: 5000;
+                      to: 0 360 0; easing: linear; loop: true">
+              </a-entity>
+
+            </a-entity>
+
+      </a-marker>
+
+      
+      <a-marker preset='hiro'>
+
+          <a-entity   position="0 1.5 0" 
+          rotation="0 0 0"
+          scale="0.3 0.3 0.3"
+          gltf-model="#eye"
+          animation-mixer 
+          animation="property: rotation; dur: 10000;
+                      to: 360 360 0; loop: true">>
+          </a-entity>
+
+          <a-entity   position="0 1.5 0" 
+          rotation="0 0 0"
+          scale="0.25 0.25 0.25"
+          gltf-model="#eye"
+          animation-mixer 
+          animation="property: rotation; dur: 10000;
+                      to: 0 360 -360; loop: true">>
+          </a-entity>
+
+          <a-entity   position="0 1.5 0" 
+          rotation="0 0 0"
+          scale="0.2 0.2 0.2"
+          gltf-model="#eye"
+          animation-mixer 
+          animation="property: rotation; dur: 10000;
+                      to: 0 -360 0; loop: true">>
+          </a-entity>
+
+       
+
+    </a-marker>
+      
+      <a-entity camera></a-entity>
+
+    </a-scene>
+  </body>
 </html>
