@@ -67,7 +67,8 @@
 
  <!-- time  -->
      <a-marker type='pattern' url='./trackers/TimeMrkr.patt'>
-
+       <!-- mb - changed position to fit square -->
+      <a-entity position="0 0 -1.5">
             <a-entity rotation="-90 0 0" >
 
               <a-entity   position="0 0.4 0" 
@@ -105,13 +106,13 @@
               animation-mixer>
               </a-entity>
             </a-entity>
-
+      </a-entity>
       </a-marker>
       
 
        <!-- cauldron  -->
      <a-marker type='pattern' url='./trackers/soupy_cauldron.patt'>
-
+      <a-entity position="0 0 -1.6" scale="0.75 0.75 0.75">
             <a-entity rotation="-90 0 0" >
 
               <a-entity   position="0 -0.3 0" 
@@ -136,7 +137,7 @@
               animation-mixer>
               </a-entity>
             </a-entity>
-
+      </a-entity>
       </a-marker>
 
 
@@ -225,6 +226,7 @@
 
       <!-- Splashy goop into spikes - Meg1 -->
       <a-marker type='pattern' url='./trackers/drill.patt'>
+        <a-entity position="0 0 -1.6">
         <a-entity animation-mixer id="#SplashyCube" gltf-model="#SplashyCube"  rotation="-90 0 0" scale="0.3 0.05 0.1" position="-0.1 0 0.2" visible="true" shadow="cast: false" ></a-entity>
 
         <a-entity animation-mixer id="#Circle.002" gltf-model="#Circle.002"  rotation="0 0 90" scale="0.2 0.2 0.2" position="0.5 0 0" visible="true" shadow="cast: false" ></a-entity>
@@ -248,6 +250,7 @@
           gltf-model="#pipe"
           animation-mixer>
           </a-entity>
+        </a-entity>
         </a-entity>
       </a-marker>
      
@@ -281,7 +284,7 @@
 
        <!-- pyramid  -->
       <a-marker type='pattern' url='./trackers/patterMarkerzSqr.patt'>
-
+        <a-entity position="0 0 -1.6" scale="0.75 0.75 0.75">
         <a-entity scale="0.75 0.75 0.75" 
         rotation="-90 0 0">
                 
@@ -328,7 +331,7 @@
           animation-mixer>
           </a-entity>
         </a-entity>
-
+      </a-entity>
       </a-marker>
    
 
