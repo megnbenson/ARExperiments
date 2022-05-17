@@ -257,26 +257,33 @@
 
       <!-- pipey spikes  Meg2 -->
       <a-marker type='pattern' url='./trackers/spikey_discs.patt'>
-        <a-entity animation-mixer id="#blueBlob" gltf-model="#BlueBlob"  rotation="-90 0 0" scale="1 1 1" position="0.3 -0.791496 3.26679 " visible="true" shadow="cast: false" ></a-entity>
+        <a-entity position="0 0 -1.6" scale="0.75 0.75 0.75">
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="0.2 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="0.1 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="0.0 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="-0.1 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="-0.2 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="-0.3 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.2 0.2 0.2" position="-0.4 0 0" visible="true" shadow="cast: false" ></a-entity>
 
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="0.5 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="0.4 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="0.3 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="0.2 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="0.1 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="0.0 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.1 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.2 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.3 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.4 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.5 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.6 0 0" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#spike" gltf-model="#Spike"  rotation="0 90 0"scale="0.3 0.3 0.3" position="-0.7 0 0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#lilPipes" gltf-model="#LilPipes"  rotation="90 0 0"scale="0.2 0.2 0.2" position="0.15 0.5 -0.0" visible="true" shadow="cast: false" ></a-entity>
+        <a-entity animation-mixer id="#lilPipes" gltf-model="#LilPipes"  rotation="90 0 180"scale="0.2 0.2 0.2" position="-0.05 0.5 -0.0" visible="true" shadow="cast: false" ></a-entity>
+        
+        <a-entity id="pipes" rotation="-90 0 0" >
+          <a-entity   position="0 0.4 0" 
+          scale="0.2  0.2 0.2"
+          gltf-model="#pipe"
+          animation-mixer>
+          </a-entity>
+          <a-entity   position="0 -0.4 0" 
+          rotation="0 0 180"
+          scale="0.2  0.2 0.2"
+          gltf-model="#pipe"
+          animation-mixer>
+          </a-entity>
+        </a-entity>
+        </a-entity>
 
-        <a-entity animation-mixer id="#lilPipes" gltf-model="#LilPipes"  rotation="90 0 0"scale="0.3 0.3 0.3" position="0.6 0 -0.2" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#lilPipes2" gltf-model="#LilPipes"  rotation="90 0 180"scale="0.3 0.3 0.3" position="-0.3 1 -0.1" visible="true" shadow="cast: false" ></a-entity>
-        <a-entity animation-mixer id="#lilPipes" gltf-model="#LilPipes"  rotation="90 0 0"scale="0.3 0.3 0.3" position="-0.1 0 -0.2" visible="true" shadow="cast: false" ></a-entity>
-		
       </a-marker>
      
 
