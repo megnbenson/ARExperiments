@@ -503,8 +503,8 @@
     </a-scene>
   </div>
 
-  <button onclick="openFullscreen();">Open Fullscreen</button>
-    <button onclick="closeFullscreen();">Close Fullscreen</button>
+  <button onclick="openFullscreen();" style="display:block; visibility: visible; position: absolute; z-index: 999; top: 0px; left: 0px;">Open Fullscreen</button>
+  <button onclick="closeFullscreen();" style="display:block; visibility: visible; position: absolute; z-index: 999; top: 0px; left: 70px;">Close Fullscreen</button>
     <script>
       var elem = document.documentElement;
       function openFullscreen() {
