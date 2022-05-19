@@ -8,9 +8,33 @@
   <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
   <script src="https://unpkg.com/aframe-particle-system-component@1.x.x/dist/aframe-particle-system-component.min.js"></script> 
 
-  <body style='margin : 0px; overflow: hidden;'>
+  <!-- Ellements to do loading screen -->
+  <head>
+    <style>
+    .loading { display:block; visibility: visible; position: absolute; z-index: 999; top: 0px; left: 0px; width: 100%; height: 100%;background-image: url("./originals symbols/drill_cauldron.png"); background-position: center; background-repeat: no-repeat; background-size: cover; }
+    </style>
     
-    <div style="position:relative;width:100%;height:100%;">
+    <script>
+       window.onload=function() {
+        
+        var element = document.getElementById("LoadingScreen");
+        element.onclick  = function() {
+            console.log("Clicked!!!");
+            var element = document.getElementById("LoadingScreen");
+                element.style.display = "none";
+            };
+          console.log("loaded!")
+       }
+    </script>
+    
+    </head>
+    
+      <body style='margin : 0px; overflow: hidden;'>
+    
+    <!--  Div to hide AR + Prompt-->    
+    <div id="LoadingScreen" class="loading"></div>
+    
+    <div id="AR" style="position:relative;width:100%;height:100%;">
     <a-scene embedded arjs="debugUIEnabled: false" vr-mode-ui="enabled: false" >
 
       <!-- Create a assets with id to hold our .gltf -->
@@ -479,4 +503,6 @@
     </a-scene>
   </div>
   </body>
+
+
 </html>
